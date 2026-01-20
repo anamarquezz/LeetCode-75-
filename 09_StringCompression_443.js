@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 String Compression
+// ============================================
+// String Compression
 // Purpose: Compress array of characters in-place
 // ⭐ ============================================
 /*
@@ -42,9 +42,9 @@ Constraints:
 chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {character[]} chars
@@ -72,9 +72,9 @@ var compress = function(chars) {
     return write;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 let test1 = ["a","a","b","b","c","c","c"];
 let result1 = compress(test1);
@@ -97,9 +97,9 @@ console.log("Input:    ", ["a","b","b","b","b","b","b","b","b","b","b","b","b"])
 console.log("Output:   ", test3.slice(0, result3));
 console.log("Expected: ", ["a","b","1","2"]);
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Two-pointer approach with character grouping
 // 1. Use 'write' pointer to track where to write compressed characters
@@ -117,4 +117,4 @@ console.log("Expected: ", ["a","b","1","2"]);
 // i=0, start=0: skip "aa" -> write="a" at index 0, count=2, write "2" at index 1
 // i=2, start=2: skip "bb" -> write="b" at index 2, count=2, write "2" at index 3
 // i=4, start=4: skip "ccc" -> write="c" at index 4, count=3, write "3" at index 5
-// Result: ["a","2","b","2","c","3"], return 6 ✅
+// Result: ["a","2","b","2","c","3"], return 6

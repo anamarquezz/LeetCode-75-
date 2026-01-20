@@ -1,5 +1,5 @@
-﻿// ⭐ ============================================
-// 📝 Can Place Flowers
+﻿// ============================================
+// Can Place Flowers
 // Purpose: Determine if n flowers can be planted
 // ⭐ ============================================
 /*
@@ -27,9 +27,9 @@ There are no two adjacent flowers in flowerbed.
 0 <= n <= flowerbed.length
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} flowerbed
@@ -46,17 +46,17 @@ var canPlaceFlowers = function(flowerbed, n) {
     return n === 0;
 }
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", canPlaceFlowers([1,0,0,0,1], 1)); // Expected: true
 console.log("Test 2:", canPlaceFlowers([1,0,0,0,1], 2)); // Expected: false
 console.log("Test 3:", canPlaceFlowers([0,0,1,0,0], 1)); // Expected: true
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Single-pass greedy approach
 // 1. Iterate through each plot in the flowerbed
@@ -72,4 +72,4 @@ console.log("Test 3:", canPlaceFlowers([0,0,1,0,0], 1)); // Expected: true
 // f=0: flowerbed[0]=1 (already planted, skip)
 // f=1: flowerbed[1]=0, left=1, right=0 (can't plant, adjacent to flower)
 // f=2: flowerbed[2]=0, left=0, right=0 (plant here!) flowerbed=[1,0,1,0,1], n=0
-// Result: n === 0 = true ✅
+// Result: n === 0 = true

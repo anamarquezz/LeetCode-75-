@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Max Number of K-Sum Pairs
+// ============================================
+// Max Number of K-Sum Pairs
 // Purpose: Find maximum pairs that sum to k
 // ⭐ ============================================
 /*
@@ -35,9 +35,9 @@ Constraints:
 1 <= k <= 109
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} nums
@@ -71,18 +71,18 @@ var maxOperations = function(nums, k) {
     return totalOperations;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: [1,2,3,4], k=5", maxOperations([1,2,3,4], 5)); // Expected: 2
 console.log("Test 2: [3,1,3,4,3], k=6", maxOperations([3,1,3,4,3], 6)); // Expected: 1
 console.log("Test 3: [2,2,2,3], k=4", maxOperations([2,2,2,3], 4)); // Expected: 1
 console.log("Test 4: [1,1,1,1], k=2", maxOperations([1,1,1,1], 2)); // Expected: 2
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Hash Map approach with single pass
 // 1. Create a Map to track available numbers for pairing
@@ -100,5 +100,5 @@ console.log("Test 4: [1,1,1,1], k=2", maxOperations([1,1,1,1], 2)); // Expected:
 // currentNumber=2: neededNumber=3, not available → add 2 to map
 // currentNumber=3: neededNumber=2, available! → totalOperations=1, remove 2
 // currentNumber=4: neededNumber=1, available! → totalOperations=2, remove 1
-// Return 2 ✅
+// Return 2
 

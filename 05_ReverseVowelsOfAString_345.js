@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Reverse Vowels of a String
+// ============================================
+// Reverse Vowels of a String
 // Purpose: Reverse only the vowels in a string
 // ⭐ ============================================
 /*
@@ -28,9 +28,9 @@ Constraints:
 s consist of printable ASCII characters.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {string} s
@@ -57,17 +57,17 @@ var reverseVowels = function(s) {
     return chars.join('');
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: IceCreAm :: ", reverseVowels("IceCreAm")); // Expected: "AceCreIm"
 console.log("Test 2: leetcode :: ", reverseVowels("leetcode")); // Expected: "leotcede"
 console.log("Test 3: race :: ", reverseVowels("race")); // Expected: "race"
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Two-pointer approach with Set
 // 1. Create a Set of vowels (both uppercase and lowercase)
@@ -88,4 +88,4 @@ console.log("Test 3: race :: ", reverseVowels("race")); // Expected: "race"
 // Find vowel from right: 'm' is not, 'A' is vowel at right=4
 // Swap: "AceCreIm"
 // Continue until pointers meet
-// Result: "AceCreIm" ✅
+// Result: "AceCreIm"

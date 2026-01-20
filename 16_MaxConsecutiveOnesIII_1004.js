@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Max Consecutive Ones III
+// ============================================
+// Max Consecutive Ones III
 // Purpose: Find maximum consecutive 1's after flipping at most k 0's
 // ⭐ ============================================
 /*
@@ -23,9 +23,9 @@ nums[i] is either 0 or 1.
 0 <= k <= nums.length
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} nums
@@ -56,18 +56,18 @@ var longestOnes = function(nums, k) {
     return maxOnes;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: [1,1,1,0,0,0,1,1,1,1,0], k=2", longestOnes([1,1,1,0,0,0,1,1,1,1,0], 2)); // Expected: 6
 console.log("Test 2: [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k=3", longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3)); // Expected: 10
 console.log("Test 3: [0], k=1", longestOnes([0], 1)); // Expected: 1
 console.log("Test 4: [1,1,1], k=0", longestOnes([1,1,1], 0)); // Expected: 3
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Sliding Window with Two Pointers
 // 1. Use two pointers (start and end) to maintain a window
@@ -88,5 +88,5 @@ console.log("Test 4: [1,1,1], k=0", longestOnes([1,1,1], 0)); // Expected: 3
 // Window [1,1,0,0,0,1]: zeros = 3 > k, shrink
 // Window [1,0,0,0,1,1]: zeros = 3 > k, shrink
 // Window [0,0,0,1,1,1]: zeros = 3 > k, shrink
-// Window [0,0,1,1,1,1]: zeros = 2, length = 6 ✅ (maximum)
+// Window [0,0,1,1,1,1]: zeros = 2, length = 6 (maximum)
 // Maximum consecutive 1's after flipping at most 2 zeros is 6

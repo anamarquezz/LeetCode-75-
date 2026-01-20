@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Increasing Triplet Subsequence
+// ============================================
+// Increasing Triplet Subsequence
 // Purpose: Find if an increasing triplet exists
 // ⭐ ============================================
 /*
@@ -32,9 +32,9 @@ Constraints:
 -231 <= nums[i] <= 231 - 1
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} nums
@@ -56,17 +56,17 @@ var increasingTriplet = function(nums) {
     return false;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", increasingTriplet([1,2,3,4,5])); // Expected: true
 console.log("Test 2:", increasingTriplet([5,4,3,2,1])); // Expected: false
 console.log("Test 3:", increasingTriplet([2,1,5,0,4,6])); // Expected: true
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Two-variable tracking approach
 // 1. Keep track of two variables: first (smallest) and second (second smallest)
@@ -86,4 +86,4 @@ console.log("Test 3:", increasingTriplet([2,1,5,0,4,6])); // Expected: true
 // i=2: num=5, first=1, second=5 (5 > 1)
 // i=3: num=0, first=0, second=5 (0 < 1)
 // i=4: num=4, first=0, second=4 (4 > 0 but 4 < 5)
-// i=5: num=6, return true (6 > 4 and 6 > 0) ✅
+// i=5: num=6, return true (6 > 4 and 6 > 0)

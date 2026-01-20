@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Kids With the Greatest Number of Candies
+// ============================================
+// Kids With the Greatest Number of Candies
 // Purpose: Find which kids will have greatest candies after getting extras
 // ⭐ ============================================
 /*
@@ -28,9 +28,9 @@ n == candies.length
 1 <= extraCandies <= 50
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} candies
@@ -42,17 +42,17 @@ var kidsWithCandies = function(candies, extraCandies) {
     return candies.map(candy => candy + extraCandies >= maxCandies);
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", kidsWithCandies([2,3,5,1,3], 3)); // Expected: [true,true,true,false,true]
 console.log("Test 2:", kidsWithCandies([4,2,1,1,2], 1)); // Expected: [true,false,false,false,false]
 console.log("Test 3:", kidsWithCandies([12,1,12], 10)); // Expected: [true,false,true]
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Find max and compare
 // 1. Find the maximum number of candies any kid currently has
@@ -69,4 +69,4 @@ console.log("Test 3:", kidsWithCandies([12,1,12], 10)); // Expected: [true,false
 // Kid 2: 5 + 3 = 8 >= 5 ✓ true
 // Kid 3: 1 + 3 = 4 >= 5 ✗ false
 // Kid 4: 3 + 3 = 6 >= 5 ✓ true
-// Result: [true,true,true,false,true] ✅
+// Result: [true,true,true,false,true]

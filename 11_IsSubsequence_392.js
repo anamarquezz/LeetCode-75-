@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Is Subsequence
+// ============================================
+// Is Subsequence
 // Purpose: Check if string s is a subsequence of string t
 // ⭐ ============================================
 /*
@@ -26,9 +26,9 @@ Constraints:
 s and t consist only of lowercase English letters.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {string} s
@@ -46,18 +46,18 @@ var isSubsequence = function(s, t) {
     return sIndex === s.length;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: abc, ahbgdc ", isSubsequence("abc", "ahbgdc")); // Expected: true
 console.log("Test 2: axc, ahbgdc ", isSubsequence("axc", "ahbgdc")); // Expected: false
 console.log("Test 3: '', ahbgdc ", isSubsequence("", "ahbgdc")); // Expected: true
 console.log("Test 4: aec, abcde ", isSubsequence("aec", "abcde")); // Expected: false
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Two-pointer iteration approach
 // 1. Initialize sIndex to 0 to track position in string s
@@ -76,4 +76,4 @@ console.log("Test 4: aec, abcde ", isSubsequence("aec", "abcde")); // Expected: 
 // i=3, t[3]='g': 'g' !== s[2]='c' → sIndex=2
 // i=4, t[4]='d': 'd' !== s[2]='c' → sIndex=2
 // i=5, t[5]='c': 'c' === s[2]='c' → sIndex=3
-// sIndex === s.length → return true ✅
+// sIndex === s.length → return true

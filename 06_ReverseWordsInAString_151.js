@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Reverse Words in a String
+// ============================================
+// Reverse Words in a String
 // Purpose: Reverse the order of words in a string
 // ⭐ ============================================
 /*
@@ -39,9 +39,9 @@ s contains English letters (upper-case and lower-case), digits, and spaces ' '.
 There is at least one word in s.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {string} s
@@ -51,17 +51,17 @@ var reverseWords = function(s) {
     return s.trim().split(/\s+/).reverse().join(' ');
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", reverseWords("the sky is blue")); // Expected: "blue is sky the"
 console.log("Test 2:", reverseWords("  hello world  ")); // Expected: "world hello"
 console.log("Test 3:", reverseWords("a good   example")); // Expected: "example good a"
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Trim, Split, Reverse, Join approach
 // 1. Trim leading and trailing spaces with trim()
@@ -78,4 +78,4 @@ console.log("Test 3:", reverseWords("a good   example")); // Expected: "example 
 // Step 1: trim() -> "the sky is blue"
 // Step 2: split(/\s+/) -> ["the", "sky", "is", "blue"]
 // Step 3: reverse() -> ["blue", "is", "sky", "the"]
-// Step 4: join(' ') -> "blue is sky the" ✅
+// Step 4: join(' ') -> "blue is sky the"

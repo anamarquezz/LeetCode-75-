@@ -1,7 +1,7 @@
 
 
-// ⭐ ============================================
-// 📝 Greatest Common Divisor of Strings
+// ============================================
+// Greatest Common Divisor of Strings
 // Purpose: Find the largest string that divides both input strings
 // ⭐ ============================================
 /*
@@ -31,9 +31,9 @@ Constraints:
 str1 and str2 consist of English uppercase letters.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {string} str1
@@ -58,18 +58,18 @@ var gcdOfStrings = function(str1, str2) {
     return str1.substring(0, length);
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", gcdOfStrings("ABCABC", "ABC")); // Expected: "ABC"
 console.log("Test 2:", gcdOfStrings("ABABAB", "ABAB")); // Expected: "AB"
 console.log("Test 3:", gcdOfStrings("LEET", "CODE")); // Expected: ""
 console.log("Test 4:", gcdOfStrings("AAAAAB", "AAA")); // Expected: ""
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: GCD approach with string validation
 // 1. First check if str1 + str2 equals str2 + str1
@@ -84,4 +84,4 @@ console.log("Test 4:", gcdOfStrings("AAAAAB", "AAA")); // Expected: ""
 // Example: str1 = "ABCABC", str2 = "ABC"
 // Check: "ABCABCABC" === "ABCABCABC" ✓ (true)
 // GCD(6, 3) = 3
-// Result: str1.substring(0, 3) = "ABC" ✅
+// Result: str1.substring(0, 3) = "ABC"

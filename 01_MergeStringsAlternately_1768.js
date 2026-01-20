@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Merge Strings Alternately
+// ============================================
+// Merge Strings Alternately
 // Purpose: Merge two strings in alternating order
 // ⭐ ============================================
 /*
@@ -41,9 +41,9 @@ Constraints:
 word1 and word2 consist of lowercase English letters.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 var mergeAlternately = function(word1, word2) {
     let combinedWords = "";
@@ -59,18 +59,18 @@ var mergeAlternately = function(word1, word2) {
     return combinedWords;            
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", mergeAlternately("abc", "pqr")); // Expected: "apbqcr"
 console.log("Test 2:", mergeAlternately("ab", "pqrs")); // Expected: "apbqrs"
 console.log("Test 3:", mergeAlternately("abcd", "pq")); // Expected: "apbqcd"
 
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Two-pointer iteration approach
 // 1. Find the maximum length between word1 and word2
@@ -85,4 +85,4 @@ console.log("Test 3:", mergeAlternately("abcd", "pq")); // Expected: "apbqcd"
 // Example: word1 = "abc", word2 = "pqr"
 // i=0: combinedWords = "a" + "p" = "ap"
 // i=1: combinedWords = "ap" + "b" + "q" = "apbq"
-// i=2: combinedWords = "apbq" + "c" + "r" = "apbqcr" ✅
+// i=2: combinedWords = "apbq" + "c" + "r" = "apbqcr"

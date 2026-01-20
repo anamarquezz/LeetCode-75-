@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Product of Array Except Self
+// ============================================
+// Product of Array Except Self
 // Purpose: Return array where each element is product of all others
 // ⭐ ============================================
 /*
@@ -35,9 +35,9 @@ Constraints:
 The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} nums
@@ -63,17 +63,17 @@ var productExceptSelf = function(nums) {
     return answer;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1:", productExceptSelf([1,2,3,4])); // Expected: [24,12,8,6]
 console.log("Test 2:", productExceptSelf([-1,1,0,-3,3])); // Expected: [0,0,9,0,0]
 console.log("Test 3:", productExceptSelf([2,3,4,5])); // Expected: [60,40,30,24]
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 //
 // Algorithm: Two-pass left and right product approach
 // 1. Create answer array of same length

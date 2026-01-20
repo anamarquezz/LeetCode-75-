@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Maximum Number of Vowels in a Substring of Given Length
+// ============================================
+// Maximum Number of Vowels in a Substring of Given Length
 // Purpose: Find the maximum number of vowels in any substring of length k
 // ⭐ ============================================
 /*
@@ -28,9 +28,9 @@ s consists of lowercase English letters.
 1 <= k <= s.length
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {string} s
@@ -62,18 +62,18 @@ var maxVowels = function(s, k) {
     return max;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: 'abciiidef', k=3", maxVowels("abciiidef", 3)); // Expected: 3
 console.log("Test 2: 'aeiou', k=2", maxVowels("aeiou", 2)); // Expected: 2
 console.log("Test 3: 'leetcode', k=3", maxVowels("leetcode", 3)); // Expected: 2
 console.log("Test 4: 'bcdfg', k=2", maxVowels("bcdfg", 2)); // Expected: 0
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Sliding Window with Hash Map
 // 1. Create a hash map of vowels for O(1) lookup

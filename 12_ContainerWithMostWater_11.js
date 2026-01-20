@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Container With Most Water
+// ============================================
+// Container With Most Water
 // Purpose: Find two lines that hold the most water
 // ⭐ ============================================
 /*
@@ -24,9 +24,9 @@ Input: height = [1,1]
 Output: 1
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 var maxArea = function(height) {
     let left = 0;
@@ -53,16 +53,16 @@ var maxArea = function(height) {
     return maxWater;
 };
 
-// ⭐ ============================================
-// 📊 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("[1,8,6,2,5,4,8,3,7]", maxArea([1,8,6,2,5,4,8,3,7])); // Output: 49
 console.log("[1,1]", maxArea([1,1]));               // Output: 1
 
-// ⭐ ============================================
-// 📋 Explanation
-// ⭐ ============================================
+// ============================================
+// Explanation
+// ============================================
 //
 // Algorithm: Two-pointer approach (Greedy)
 // 1. Initialize left pointer at the start (index 0) and right pointer at the end
@@ -87,4 +87,4 @@ console.log("[1,1]", maxArea([1,1]));               // Output: 1
 // left=2, right=8: area = 6 × min(6,7) = 6 × 6 = 36
 // left=3, right=8: area = 5 × min(2,7) = 5 × 2 = 10
 // ... and so on
-// Result: 49 ✅
+// Result: 49

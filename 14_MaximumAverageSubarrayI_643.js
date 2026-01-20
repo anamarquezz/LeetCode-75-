@@ -1,5 +1,5 @@
-// ⭐ ============================================
-// 📝 Maximum Average Subarray I
+// ============================================
+// Maximum Average Subarray I
 // Purpose: Find the maximum average of a contiguous subarray of length k
 // ⭐ ============================================
 /*
@@ -22,9 +22,9 @@ n == nums.length
 -10^4 <= nums[i] <= 10^4
 */
 
-// ⭐ ============================================
-// 🔧 Solution Function
-// ⭐ ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} nums
@@ -50,18 +50,18 @@ var findMaxAverage = function(nums, k) {
     return maxSum / k;
 };
 
-// ⭐ ============================================
-// 🧪 Test Cases
-// ⭐ ============================================
+// ============================================
+// Test Cases
+// ============================================
 
 console.log("Test 1: [1,12,-5,-6,50,3], k=4", findMaxAverage([1,12,-5,-6,50,3], 4)); // Expected: 12.75
 console.log("Test 2: [5], k=1", findMaxAverage([5], 1)); // Expected: 5
 console.log("Test 3: [0,4,0,3,2], k=1", findMaxAverage([0,4,0,3,2], 1)); // Expected: 4
 console.log("Test 4: [1,2,3,4,5], k=2", findMaxAverage([1,2,3,4,5], 2)); // Expected: 4.5
 
-// ⭐ ============================================
+// ============================================
 //  Explanation
-// ⭐ ============================================
+// ============================================
 // 
 // Algorithm: Sliding Window approach
 // 1. Initialize the sum of the first window (first k elements)
@@ -75,6 +75,6 @@ console.log("Test 4: [1,2,3,4,5], k=2", findMaxAverage([1,2,3,4,5], 2)); // Expe
 //
 // Example: nums = [1,12,-5,-6,50,3], k = 4
 // Window [1,12,-5,-6]: sum = 2, avg = 0.5
-// Window [12,-5,-6,50]: sum = 51, avg = 12.75 ✅
+// Window [12,-5,-6,50]: sum = 51, avg = 12.75
 // Window [-5,-6,50,3]: sum = 42, avg = 10.5
 // Maximum average is 12.75
