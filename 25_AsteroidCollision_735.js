@@ -1,7 +1,7 @@
-//  ============================================
-//  Asteroid Collision
-// Purpose: Resolve collisions using a stack
-//  ============================================
+// ============================================
+// Asteroid Collision
+// Purpose: Simulate asteroid collisions with stack
+// ⭐ ============================================
 /*
 We are given an array asteroids of integers representing asteroids in a row.
 The indices of the asteroid in the array represent their relative position in space.
@@ -31,19 +31,16 @@ Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulti
 Example 4:
 Input: asteroids = [3,5,-6,2,-1,4]
 Output: [-6,2,4]
-Explanation: The asteroid -6 makes the asteroid 3 and 5 explode, and then continues going left.
-On the other side, the asteroid 2 makes the asteroid -1 explode and then continues going right,
-without reaching asteroid 4.
 
 Constraints:
-2 <= asteroids.length <= 10^4
+2 <= asteroids.length <= 104
 -1000 <= asteroids[i] <= 1000
 asteroids[i] != 0
 */
 
-//  ============================================
-//  Solution Function
-//  ============================================
+// ============================================
+// Solution Function
+// ============================================
 
 /**
  * @param {number[]} asteroids
@@ -52,43 +49,68 @@ asteroids[i] != 0
 var asteroidCollision = function(asteroids) {
   const stack = [];
 
-  for (const asteroid of asteroids) {
+  for (const ast of asteroids) {
     let alive = true;
 
-    while (alive && stack.length > 0 && asteroid < 0 && stack[stack.length - 1] > 0) {
+    // Step 1: Process each asteroid
+    while (alive && ast < 0 && stack.length > 0 && stack[stack.length - 1] > 0) {
       const top = stack[stack.length - 1];
-      if (Math.abs(top) < Math.abs(asteroid)) {
+
+      // Step 2: If top asteroid is moving right and current is moving left, collision occurs
+      if (top < Math.abs(ast)) {
+        // Top asteroid explodes
         stack.pop();
         continue;
-      }
-      if (Math.abs(top) === Math.abs(asteroid)) {
+      } else if (top === Math.abs(ast)) {
+        // Both asteroids explode
         stack.pop();
+        alive = false;
+      } else {
+        // Current asteroid explodes
+        alive = false;
       }
-      alive = false;
     }
 
-    if (alive) stack.push(asteroid);
+    // Step 3: Add asteroid to stack if it survived
+    if (alive) {
+      stack.push(ast);
+    }
   }
 
   return stack;
 };
 
-//  ============================================
-//  Test Cases
-//  ============================================
+// ============================================
+// Test Cases
+// ============================================
 
-console.log("Test 1:", asteroidCollision([5,10,-5])); // Expected: [5,10]
-console.log("Test 2:", asteroidCollision([8,-8])); // Expected: []
-console.log("Test 3:", asteroidCollision([10,2,-5])); // Expected: [10]
-console.log("Test 4:", asteroidCollision([3,5,-6,2,-1,4])); // Expected: [-6,2,4]
+console.log("Test 1: [5,10,-5]", asteroidCollision([5,10,-5])); // Expected: [5,10]
+console.log("Test 2: [8,-8]", asteroidCollision([8,-8])); // Expected: []
+console.log("Test 3: [10,2,-5]", asteroidCollision([10,2,-5])); // Expected: [10]
+console.log("Test 4: [3,5,-6,2,-1,4]", asteroidCollision([3,5,-6,2,-1,4])); // Expected: [-6,2,4]
 
-//  ============================================
-//  Explanation
-//  ============================================
-// Algorithm: Stack
-// 1. Iterate through asteroids and compare with the last right-moving one
-// 2. While a left-moving asteroid meets a right-moving asteroid, resolve collisions
-// 3. Push surviving asteroids to the stack
+// ============================================
+// Explanation
+// ============================================
+// Algorithm: Stack with Collision Simulation
+// 1. Use a stack to track surviving asteroids
+// 2. For each asteroid:
+//    - If moving right (positive), push to stack (no collision possible)
+//    - If moving left (negative), check collision with top of stack
+// 3. Collision rules:
+//    - Only happens if top is moving right and current is moving left
+//    - Compare absolute values to determine survivor
+//    - If equal size, both explode
+// 4. Return remaining asteroids in stack
 //
-// Time Complexity:  O(n)
-// Space Complexity: O(n)
+// Time Complexity:  O(n) - each asteroid is processed once
+// Space Complexity: O(n) - stack storage
+//
+// Example: asteroids = [3,5,-6,2,-1,4]
+// Process 3: stack = [3]
+// Process 5: stack = [3, 5]
+// Process -6: collide with 5 -> 5 explodes, collide with 3 -> 3 explodes, -6 survives -> stack = [-6]
+// Process 2: stack = [-6, 2]
+// Process -1: collide with 2 -> 2 explodes, stack = [-6]
+// Process 4: stack = [-6, 4]
+// Result: [-6, 4]
